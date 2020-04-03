@@ -8,11 +8,9 @@ import {
 class Pagination extends Component {
   onPrevousClick = () => {
     this.props.setPrevious();
-   //  this.props.startGetLatestMovies();
   };
   onNextClick = () => {
     this.props.setNext();
-    // this.props.startGetLatestMovies();
   };
   render() {
     return (

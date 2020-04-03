@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Card from "./Card/Card";
 import { connect } from "react-redux";
 import { startGetLatestGames } from "../../store/actions/games";
-import selectGames from "../../store/selectors/games";
 
 class TopCardHolder extends Component {
   componentDidMount() {
@@ -11,17 +10,13 @@ class TopCardHolder extends Component {
 
   render() {
     let games = this.props.games.map((game, index) => {
-      return (<Card game={game} key={index} />);
+      return <Card game={game} key={index} />;
     });
-    
-    if (games.length=== 0) {
-      games = (<h4 className="label">No Matching games could be found!</h4>)
+
+    if (games.length === 0) {
+      games = <h4 className="label">No Matching games could be found!</h4>;
     }
-    return (
-      <div className="cardholder">
-        {games}
-      </div>
-    );
+    return <div className="cardholder">{games}</div>;
   }
 }
 
@@ -34,4 +29,3 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TopCardHolder);
-

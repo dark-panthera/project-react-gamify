@@ -10,6 +10,20 @@
     text-decoration: none;
     outline: none;
 
+    &--login {
+        background: #7e6c5c;
+        border: none;
+        color: #fff;
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 1;
+        padding: 1.2rem;
+        text-decoration: none;
+        outline: none;
+        border-radius: 0.4rem;
+    }
+
     &--link {
         background: none;
         transition: color 2s ease;
@@ -45,9 +59,9 @@
     }
 
     &--dark {
-        background: #e68f3f;// $filter-grey;
+        background: #e68f3f; // $filter-grey;
         border-radius: 0.4rem;
-        
+
         transition: background 2s ease;
         margin: 1rem 4rem;
 
