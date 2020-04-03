@@ -33,21 +33,6 @@
         }
     }
 
-    &--secondary {
-        background: #888;
-    }
-
-    &--primary {
-        background: $secondary;
-        padding: 0.8rem 1.5rem;
-        border-radius: 0.4rem;
-        transition: background 3s ease;
-
-        &:hover {
-            background: darken($secondary, $amount: 17%);
-        }
-    }
-
     &--view {
         background: #d5a981;
         border-radius: 0.4rem;
