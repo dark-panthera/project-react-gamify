@@ -31,8 +31,8 @@ const card = props => {
           {2018}
         </div>
         <img
-          src={`/images/games/${vendor}.jpg`}
-          alt=""
+          src={`/images/${vendor}.jpg`}
+          alt="images"
         />
       </div>
       <div className="card__actions">
