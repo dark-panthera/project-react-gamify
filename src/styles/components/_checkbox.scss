@@ -63,7 +63,7 @@ This was simply imported from some resource found online
 }
 
 .option-input:checked {
-  background: $filter-grey;
+  background: #eccaab;
 }
 
 .option-input:checked::before {
@@ -80,7 +80,7 @@ This was simply imported from some resource found online
 
 .option-input:checked::after {
   @include click-wave();
-  background: $filter-grey;
+  background: #eccaab;
   content: "";
   display: block;
   position: relative;

@@ -1,25 +1,19 @@
 import React, { Component } from "react";
-import Banner from "./Banner/Banner";
-import Filter from "./Filter/Filter";
-import CardHolder from "../CardHolder/CardHolder";
-import Pagination from "./Pagination/Pagination";
+import Banner from './Banner/Banner';
+import Section from './Section/Section';
+import TopCardHolder from '../Cardholder/TopCardHolder';
 
-class Dashboard extends Component {
-  render() {
-    
-    return (
-      <div>
-        <Banner />
-        {this.props.showFilter ? (
-          <div>
-            <Filter />
-          </div>
-        ) : null}
-        <CardHolder />
-        <Pagination />
-      </div>
-    );
-  }
+class LandingPage extends Component {
+
+    render() {
+        return (
+            <div>
+                <Banner />
+                <Section />
+                <TopCardHolder/>
+            </div>
+        )
+    }
 }
 
-export default Dashboard;
+export default LandingPage;

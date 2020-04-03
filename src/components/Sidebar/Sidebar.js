@@ -1,36 +1,34 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { setGenre, startGetGenreList } from "../../store/actions/movies";
+import { setVendor } from "../../store/actions/games";
 
 class SideBar extends Component {
   state = {
-    selectedGenre: ""
+    selectedVendor: ""
   };
 
   onChange = e => {
     this.setState({
-      selectedGenre: e.target.value
+      selectedVendor: e.target.value
     });
   };
 
   onFilter = () => {
-    this.props.setGenre(this.state.selectedGenre);
+    this.props.setVendor(this.state.selectedVendor);
 
-    this.props.history.push('/dashboard');
+    this.props.history.push("/dashboard");
   };
 
   onClear = () => {
     this.setState({
-      selectedGenre: ""
+      selectedVendor: ""
     });
 
-    this.props.setGenre("");
+    this.props.setVendor("");
     this.props.onHideSidebar();
   };
 
-  componentDidMount() {
-    this.props.startGetGenreList();
-  }
+  componentDidMount() {}
 
   render() {
     return (
@@ -46,20 +44,20 @@ class SideBar extends Component {
         </div>
 
         <div className="sidebar__divider"></div>
-        <div className="sidebar__genre">
-          <div className="sidebar__genre-title">Genre List</div>
-          {this.props.genres.map((genre, index) => {
+        <div className="sidebar__vendor">
+          <div className="sidebar__vendor-title">Vendor List</div>
+          {this.props.vendors.map((vendor, index) => {
             return (
-              <div className="genre" key={index}>
+              <div className="vendor" key={index}>
                 <label>
                   <input
                     type="radio"
                     className="option-input radio"
                     name="example"
-                    value={genre.id}
+                    value={vendor.name}
                     onChange={this.onChange}
                   />
-                  {genre.name}
+                  {vendor.name}
                 </label>
               </div>
             );
@@ -88,12 +86,11 @@ class SideBar extends Component {
 }
 
 const mapStateToProps = (state, props) => ({
-  genres: state.movies.genres
+  vendors: state.games.vendors
 });
 
 const mapDispatchToProps = dispatch => ({
-  setGenre: genre => dispatch(setGenre(genre)),
-  startGetGenreList: () => dispatch(startGetGenreList())
+  setVendor: vendor => dispatch(setVendor(vendor))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SideBar);

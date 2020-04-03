@@ -1,36 +1,24 @@
 import React, { Component } from "react";
-import Card from "./Cards/Card";
+import Card from "./Card/Card";
 import { connect } from "react-redux";
-import { startGetLatestMovies } from "../../store/actions/movies";
-import selectMovies from "../../store/selectors/movies";
+import selectGames from "../../store/selectors/games";
 
 class CardHolder extends Component {
-  componentDidMount() {
-    this.props.startGetLatestMovies();
-  }
-
   render() {
-    let movies = this.props.movies.map((movie, index) => {
-      return (<Card movie={movie} key={index} />);
+    let games = this.props.games.map((game, index) => {
+      return <Card game={game} key={index} />;
     });
-    
-    if (movies.length=== 0) {
-        movies = (<h4 className="label">No Matching movies could be found!</h4>)
+
+    if (games.length === 0) {
+      games = <h4 className="label">No Matching games could be found!</h4>;
     }
-    return (
-      <div className="cardholder">
-        {movies}
-      </div>
-    );
+
+    return <div className="cardholder">{games}</div>;
   }
 }
 
 const mapStateToProps = (state, props) => ({
-  movies: selectMovies(state.movies.movies, state.movies, state.genre)
+  games: selectGames(state.games.currentGames, state.games, state.vendor)
 });
 
-const mapDispatchToProps = dispatch => ({
-  startGetLatestMovies: () => dispatch(startGetLatestMovies())
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(CardHolder);
+export default connect(mapStateToProps)(CardHolder);

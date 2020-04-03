@@ -6,8 +6,8 @@ const banner = props => {
       <div className="banner__image">
         <div className="content-container">
           <div className="banner__text">
-            <h1>Movies</h1>
-            <p>View Latest Movies</p>
+            <h1>Gamify</h1>
+            <p>View Latest Games</p>
           </div>
         </div>
       </div>

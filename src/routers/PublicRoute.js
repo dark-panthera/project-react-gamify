@@ -11,8 +11,9 @@ export const PublicRoute = ({
     {...rest}
     component={props =>
       isAuthenticated ? (
-        <Redirect to="/dashboard" />
-
+        <div>
+          <Redirect to="/game" />
+        </div>
       ) : (
         <Component {...props} />
       )
@@ -25,4 +26,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(PublicRoute);
-

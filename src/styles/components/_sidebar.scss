@@ -12,12 +12,13 @@ $min-width: 30rem;
   z-index: 10;
   position: fixed;
   top: 0px;
-  background: $primary;
-  max-width: $max-width;
-  min-width: $min-width;
+  background: #ffffff;
+  max-width: 50rem;
+  min-width: 30rem;
   width: 100%;
   height: 100vh;
-  border-right: 1px solid $primary-darker;
+  border-right: 1px solid #940349;
+  overflow-y: scroll;
   transition: display 2s ease;
 
   &__content {
@@ -30,11 +31,13 @@ $min-width: 30rem;
     border: 0.4px solid $primary-theme;
   }
 
-  &__genre {
+  &__vendor {
     &-title {
-      color: #fff;
-      margin: $sidebar-s;
-      border-bottom: 1px solid #fff;
+      color: #3a3d44;
+      font-weight: 800;
+      margin: 0 4rem;
+      font-size: 18px;
+      border-bottom: 1px solid #d1d1d2;
       padding: 1rem 0;
     }
   }
@@ -46,10 +49,10 @@ $min-width: 30rem;
 }
 
 
-.genre {
-  color: #fff;
-  font-size: $font-size-large;
-  margin: $sidebar-s;
+.vendor {
+  color: #8c8c8c;
+  font-size: 1.8rem;
+  margin: 0 4rem;
 
   &__label {
     padding: $sidebar-m;

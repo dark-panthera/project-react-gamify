@@ -1,5 +1,6 @@
 .filter {
-    background: $filter-grey;
+    //  background:#002f55;// $filter-grey;
+    background: #d4b69a;
     color: #fff;
 
     &>div {
@@ -12,9 +13,16 @@
         height: 100%;
     }
 
+    & h3 {
+        margin: 0;
+        padding: 1.2rem 0;
+        height: 100%;
+    }
+
     &__container {
         color: #ececec;
-        background: $primary-filter;
+        background: #002f55;
+        border-bottom: 10px solid #d4b69a;
 
         select {
             width: 100%;

@@ -35,17 +35,17 @@
     }
 
     &--view {
-        background: $primary-button;
+        background: #d5a981;
         border-radius: 0.4rem;
         transition: background 2s ease;
 
         &:hover {
-            background: darken($primary-button, $amount: 10%);
+            background: #f28b1c;
         }
     }
 
     &--dark {
-        background: $filter-grey;
+        background: #e68f3f;// $filter-grey;
         border-radius: 0.4rem;
         
         transition: background 2s ease;
@@ -58,5 +58,21 @@
 
     &--full {
         width: 100%;
+    }
+
+    &--filter {
+        background: #d4b69a;
+        padding: 0.8rem 1.5rem;
+        border-radius: 0.4rem;
+        transition: background 3s ease;
+        margin: 0.5rem 0;
+        color: #002f55;
+        font-weight: 600;
+        border: 3px double #002f55;
+        transition: background 2s ease;
+
+        &:hover {
+            background: darken(#d4b69a, 20%);
+        }
     }
 }

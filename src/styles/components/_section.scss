@@ -1,0 +1,17 @@
+.section {
+    background: #364051;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+
+    h1 {
+        margin: 0;
+
+        @media (max-width: 800px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    
+}
