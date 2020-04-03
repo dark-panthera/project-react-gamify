@@ -59,9 +59,9 @@ class AppRouter extends Component {
             <PublicRoute path="/" component={Dashboard} exact={true} />
             <PublicRoute path="/dashboard" component={GameBrowser} />
             <PrivateRoute path="/game" component={GameBrowser} />
+            <PrivateRoute path="/game:" component={GameBrowser} />
             <PublicRoute path="/login" component={Login} />
             <Route path="/logout" component={Logout} />
-
             <Route component={NotFoundPage} />
           </Switch>
         </div>
