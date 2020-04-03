@@ -76,9 +76,6 @@ module.exports = env => {
         ),
         "process.env.FIREBASE_MEASUREMENT_ID": JSON.stringify(
           process.env.FIREBASE_MEASUREMENT_ID
-        ),
-        "process.env.MOVIE_API": JSON.stringify(
-          process.env.MOVIE_API
         )
       })
     ],
