@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Card from "./Card/Card";
+import Card from "../Card/Card";
 import { connect } from "react-redux";
-import selectGames from "../../store/selectors/games";
+import selectGames from "../../../store/selectors/games";
 
-class CardHolder extends Component {
+class MainCardContainer extends Component {
   render() {
     let games = this.props.games.map((game, index) => {
       return <Card game={game} key={index} />;
@@ -21,4 +21,4 @@ const mapStateToProps = (state, props) => ({
   games: selectGames(state.games.currentGames, state.games, state.vendor)
 });
 
-export default connect(mapStateToProps, undefined)(CardHolder);
+export default connect(mapStateToProps, undefined)(MainCardContainer);

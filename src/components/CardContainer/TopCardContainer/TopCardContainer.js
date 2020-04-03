@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Card from "./Card/Card";
+import Card from "../Card/Card";
 import { connect } from "react-redux";
-import { startGetLatestGames } from "../../store/actions/games";
+import { startGetLatestGames } from "../../../store/actions/games";
 
-class TopCardHolder extends Component {
+class TopCardContainer extends Component {
   componentDidMount() {
     this.props.startGetLatestGames();
   }
@@ -28,4 +28,4 @@ const mapDispatchToProps = dispatch => ({
   startGetLatestGames: () => dispatch(startGetLatestGames())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(TopCardHolder);
+export default connect(mapStateToProps, mapDispatchToProps)(TopCardContainer);

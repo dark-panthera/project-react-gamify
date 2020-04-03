@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Cardholder from "../Cardholder/Cardholder";
+import TopCardContainer from "../CardContainer/TopCardContainer/TopCardContainer";
 import Pagination from "../GameBrowser/Pagination/Pagination";
 import Filter from "./Filter/Filter";
 
@@ -8,7 +8,7 @@ class LandingPage extends Component {
     return (
       <div>
         <Filter />
-        <Cardholder />
+        <TopCardContainer />
         <Pagination />
       </div>
     );
