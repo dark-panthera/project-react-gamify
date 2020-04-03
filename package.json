@@ -5,7 +5,7 @@
   "author": "Julian Cutajar",
   "license": "MIT",
   "engines": {
-    "node": "6.11.1"
+    "node": "12.16.1"
   },
   "scripts": {
     "build:dev": "webpack",

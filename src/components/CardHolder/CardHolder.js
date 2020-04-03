@@ -21,4 +21,4 @@ const mapStateToProps = (state, props) => ({
   games: selectGames(state.games.currentGames, state.games, state.vendor)
 });
 
-export default connect(mapStateToProps)(CardHolder);
+export default connect(mapStateToProps, undefined)(CardHolder);
