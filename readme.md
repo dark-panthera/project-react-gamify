@@ -1,6 +1,6 @@
 # Git Commands
 
-# THE NETLIFY APP
+# THE GAMIFY APP IS A REPLICA OF NETLIFY APP
 
 # Placed everything about the store in a common folder (store)
 
@@ -11,3 +11,5 @@
 # A preview of the app can be seen within the heroku url: https://netlify-app.herokuapp.com/dashboard
 
 # The app consists of Components, Sidebar drawer, it does not make use of any third party plugins to design the app instead it was build with pure CSS via CSS Grid and flexbox
+
+# The Gamify makes use of Google Provider social media login
